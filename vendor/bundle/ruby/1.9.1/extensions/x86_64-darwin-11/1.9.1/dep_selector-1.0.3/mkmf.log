@@ -1,0 +1,116 @@
+find_library: checking for main() in -lgecodesupport... -------------------- yes
+
+"/usr/local/opt/gcc46/bin/gcc-4.6 -o conftest -I/Users/BigBug/.rvm/rubies/ruby-1.9.2-head/include/ruby-1.9.1/x86_64-darwin11.4.2 -I/Users/BigBug/.rvm/rubies/ruby-1.9.2-head/include/ruby-1.9.1/ruby/backward -I/Users/BigBug/.rvm/rubies/ruby-1.9.2-head/include/ruby-1.9.1 -I. -I/usr/local/opt/libyaml/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl/include -fno-common -pipe conftest.c  -L. -L/Users/BigBug/.rvm/rubies/ruby-1.9.2-head/lib -L/usr/local/opt/libyaml/lib -L. -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl/lib     -lruby.1.9.1-static  -lpthread -ldl -lobjc "
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: int main() {return 0;}
+/* end */
+
+"/usr/local/opt/gcc46/bin/gcc-4.6 -o conftest -I/Users/BigBug/.rvm/rubies/ruby-1.9.2-head/include/ruby-1.9.1/x86_64-darwin11.4.2 -I/Users/BigBug/.rvm/rubies/ruby-1.9.2-head/include/ruby-1.9.1/ruby/backward -I/Users/BigBug/.rvm/rubies/ruby-1.9.2-head/include/ruby-1.9.1 -I. -I/usr/local/opt/libyaml/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl/include -fno-common -pipe conftest.c  -L. -L/Users/BigBug/.rvm/rubies/ruby-1.9.2-head/lib -L/usr/local/opt/libyaml/lib -L. -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl/lib     -lruby.1.9.1-static -lgecodesupport  -lpthread -ldl -lobjc "
+ld: library not found for -lgecodesupport
+collect2: ld returned 1 exit status
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: /*top*/
+4: int main() {return 0;}
+5: int t() { void ((*volatile p)()); p = (void ((*)()))main; return 0; }
+/* end */
+
+"/usr/local/opt/gcc46/bin/gcc-4.6 -o conftest -I/Users/BigBug/.rvm/rubies/ruby-1.9.2-head/include/ruby-1.9.1/x86_64-darwin11.4.2 -I/Users/BigBug/.rvm/rubies/ruby-1.9.2-head/include/ruby-1.9.1/ruby/backward -I/Users/BigBug/.rvm/rubies/ruby-1.9.2-head/include/ruby-1.9.1 -I. -I/usr/local/opt/libyaml/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl/include -fno-common -pipe conftest.c  -L. -L/Users/BigBug/.rvm/rubies/ruby-1.9.2-head/lib -L/usr/local/opt/libyaml/lib -L. -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl/lib     -lruby.1.9.1-static -lgecodesupport  -lpthread -ldl -lobjc "
+ld: library not found for -lgecodesupport
+collect2: ld returned 1 exit status
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: /*top*/
+4: int main() {return 0;}
+5: int t() { main(); return 0; }
+/* end */
+
+"/usr/local/opt/gcc46/bin/gcc-4.6 -o conftest -I/Users/BigBug/.rvm/rubies/ruby-1.9.2-head/include/ruby-1.9.1/x86_64-darwin11.4.2 -I/Users/BigBug/.rvm/rubies/ruby-1.9.2-head/include/ruby-1.9.1/ruby/backward -I/Users/BigBug/.rvm/rubies/ruby-1.9.2-head/include/ruby-1.9.1 -I. -I/usr/local/opt/libyaml/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl/include -fno-common -pipe conftest.c  -L. -L/Users/BigBug/.rvm/rubies/ruby-1.9.2-head/lib -L/usr/local/opt/libyaml/lib -L/Users/BigBug/abdoutest/chef-repo/vendor/bundle/ruby/1.9.1/gems/dep-selector-libgecode-1.0.2/lib/dep-selector-libgecode/vendored-gecode/lib -L. -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl/lib     -lruby.1.9.1-static -lgecodesupport  -lpthread -ldl -lobjc "
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: /*top*/
+4: int main() {return 0;}
+5: int t() { void ((*volatile p)()); p = (void ((*)()))main; return 0; }
+/* end */
+
+--------------------
+
+have_library: checking for main() in -lgecodesupport... -------------------- yes
+
+"/usr/local/opt/gcc46/bin/gcc-4.6 -o conftest -I/Users/BigBug/.rvm/rubies/ruby-1.9.2-head/include/ruby-1.9.1/x86_64-darwin11.4.2 -I/Users/BigBug/.rvm/rubies/ruby-1.9.2-head/include/ruby-1.9.1/ruby/backward -I/Users/BigBug/.rvm/rubies/ruby-1.9.2-head/include/ruby-1.9.1 -I. -I/Users/BigBug/abdoutest/chef-repo/vendor/bundle/ruby/1.9.1/gems/dep-selector-libgecode-1.0.2/lib/dep-selector-libgecode/vendored-gecode/include -I/usr/local/opt/libyaml/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl/include -fno-common -pipe conftest.c  -L. -L/Users/BigBug/.rvm/rubies/ruby-1.9.2-head/lib -L/usr/local/opt/libyaml/lib -L/Users/BigBug/abdoutest/chef-repo/vendor/bundle/ruby/1.9.1/gems/dep-selector-libgecode-1.0.2/lib/dep-selector-libgecode/vendored-gecode/lib -L. -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl/lib    -lgecodesupport  -lruby.1.9.1-static -lgecodesupport -lgecodesupport  -lpthread -ldl -lobjc "
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: /*top*/
+4: int main() {return 0;}
+5: int t() { void ((*volatile p)()); p = (void ((*)()))main; return 0; }
+/* end */
+
+--------------------
+
+have_library: checking for main() in -lgecodekernel... -------------------- yes
+
+"/usr/local/opt/gcc46/bin/gcc-4.6 -o conftest -I/Users/BigBug/.rvm/rubies/ruby-1.9.2-head/include/ruby-1.9.1/x86_64-darwin11.4.2 -I/Users/BigBug/.rvm/rubies/ruby-1.9.2-head/include/ruby-1.9.1/ruby/backward -I/Users/BigBug/.rvm/rubies/ruby-1.9.2-head/include/ruby-1.9.1 -I. -I/Users/BigBug/abdoutest/chef-repo/vendor/bundle/ruby/1.9.1/gems/dep-selector-libgecode-1.0.2/lib/dep-selector-libgecode/vendored-gecode/include -I/usr/local/opt/libyaml/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl/include -fno-common -pipe conftest.c  -L. -L/Users/BigBug/.rvm/rubies/ruby-1.9.2-head/lib -L/usr/local/opt/libyaml/lib -L/Users/BigBug/abdoutest/chef-repo/vendor/bundle/ruby/1.9.1/gems/dep-selector-libgecode-1.0.2/lib/dep-selector-libgecode/vendored-gecode/lib -L. -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl/lib    -lgecodesupport -lgecodesupport  -lruby.1.9.1-static -lgecodekernel -lgecodesupport -lgecodesupport  -lpthread -ldl -lobjc "
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: /*top*/
+4: int main() {return 0;}
+5: int t() { void ((*volatile p)()); p = (void ((*)()))main; return 0; }
+/* end */
+
+--------------------
+
+have_library: checking for main() in -lgecodeint... -------------------- yes
+
+"/usr/local/opt/gcc46/bin/gcc-4.6 -o conftest -I/Users/BigBug/.rvm/rubies/ruby-1.9.2-head/include/ruby-1.9.1/x86_64-darwin11.4.2 -I/Users/BigBug/.rvm/rubies/ruby-1.9.2-head/include/ruby-1.9.1/ruby/backward -I/Users/BigBug/.rvm/rubies/ruby-1.9.2-head/include/ruby-1.9.1 -I. -I/Users/BigBug/abdoutest/chef-repo/vendor/bundle/ruby/1.9.1/gems/dep-selector-libgecode-1.0.2/lib/dep-selector-libgecode/vendored-gecode/include -I/usr/local/opt/libyaml/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl/include -fno-common -pipe conftest.c  -L. -L/Users/BigBug/.rvm/rubies/ruby-1.9.2-head/lib -L/usr/local/opt/libyaml/lib -L/Users/BigBug/abdoutest/chef-repo/vendor/bundle/ruby/1.9.1/gems/dep-selector-libgecode-1.0.2/lib/dep-selector-libgecode/vendored-gecode/lib -L. -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl/lib    -lgecodekernel -lgecodesupport -lgecodesupport  -lruby.1.9.1-static -lgecodeint -lgecodekernel -lgecodesupport -lgecodesupport  -lpthread -ldl -lobjc "
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: /*top*/
+4: int main() {return 0;}
+5: int t() { void ((*volatile p)()); p = (void ((*)()))main; return 0; }
+/* end */
+
+--------------------
+
+have_library: checking for main() in -lgecodeminimodel... -------------------- yes
+
+"/usr/local/opt/gcc46/bin/gcc-4.6 -o conftest -I/Users/BigBug/.rvm/rubies/ruby-1.9.2-head/include/ruby-1.9.1/x86_64-darwin11.4.2 -I/Users/BigBug/.rvm/rubies/ruby-1.9.2-head/include/ruby-1.9.1/ruby/backward -I/Users/BigBug/.rvm/rubies/ruby-1.9.2-head/include/ruby-1.9.1 -I. -I/Users/BigBug/abdoutest/chef-repo/vendor/bundle/ruby/1.9.1/gems/dep-selector-libgecode-1.0.2/lib/dep-selector-libgecode/vendored-gecode/include -I/usr/local/opt/libyaml/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl/include -fno-common -pipe conftest.c  -L. -L/Users/BigBug/.rvm/rubies/ruby-1.9.2-head/lib -L/usr/local/opt/libyaml/lib -L/Users/BigBug/abdoutest/chef-repo/vendor/bundle/ruby/1.9.1/gems/dep-selector-libgecode-1.0.2/lib/dep-selector-libgecode/vendored-gecode/lib -L. -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl/lib    -lgecodeint -lgecodekernel -lgecodesupport -lgecodesupport  -lruby.1.9.1-static -lgecodeminimodel -lgecodeint -lgecodekernel -lgecodesupport -lgecodesupport  -lpthread -ldl -lobjc "
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: /*top*/
+4: int main() {return 0;}
+5: int t() { void ((*volatile p)()); p = (void ((*)()))main; return 0; }
+/* end */
+
+--------------------
+
+have_library: checking for main() in -lgecodesearch... -------------------- yes
+
+"/usr/local/opt/gcc46/bin/gcc-4.6 -o conftest -I/Users/BigBug/.rvm/rubies/ruby-1.9.2-head/include/ruby-1.9.1/x86_64-darwin11.4.2 -I/Users/BigBug/.rvm/rubies/ruby-1.9.2-head/include/ruby-1.9.1/ruby/backward -I/Users/BigBug/.rvm/rubies/ruby-1.9.2-head/include/ruby-1.9.1 -I. -I/Users/BigBug/abdoutest/chef-repo/vendor/bundle/ruby/1.9.1/gems/dep-selector-libgecode-1.0.2/lib/dep-selector-libgecode/vendored-gecode/include -I/usr/local/opt/libyaml/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl/include -fno-common -pipe conftest.c  -L. -L/Users/BigBug/.rvm/rubies/ruby-1.9.2-head/lib -L/usr/local/opt/libyaml/lib -L/Users/BigBug/abdoutest/chef-repo/vendor/bundle/ruby/1.9.1/gems/dep-selector-libgecode-1.0.2/lib/dep-selector-libgecode/vendored-gecode/lib -L. -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl/lib    -lgecodeminimodel -lgecodeint -lgecodekernel -lgecodesupport -lgecodesupport  -lruby.1.9.1-static -lgecodesearch -lgecodeminimodel -lgecodeint -lgecodekernel -lgecodesupport -lgecodesupport  -lpthread -ldl -lobjc "
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: /*top*/
+4: int main() {return 0;}
+5: int t() { void ((*volatile p)()); p = (void ((*)()))main; return 0; }
+/* end */
+
+--------------------
+

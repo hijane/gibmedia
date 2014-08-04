@@ -1,0 +1,44 @@
+/Users/BigBug/.rvm/rubies/ruby-1.9.2-head/bin/ruby extconf.rb 
+checking for rb_thread_blocking_region()... yes
+checking for sys/select.h... yes
+checking for poll.h... yes
+checking for sys/epoll.h... no
+checking for sys/event.h... yes
+checking for sys/queue.h... yes
+checking for port.h... no
+checking for sys/resource.h... yes
+creating Makefile
+
+make  clean
+
+make
+/usr/local/opt/gcc46/bin/gcc-4.6 -I. -I/Users/BigBug/.rvm/rubies/ruby-1.9.2-head/include/ruby-1.9.1/x86_64-darwin11.4.2 -I/Users/BigBug/.rvm/rubies/ruby-1.9.2-head/include/ruby-1.9.1/ruby/backward -I/Users/BigBug/.rvm/rubies/ruby-1.9.2-head/include/ruby-1.9.1 -I. -DHAVE_RB_THREAD_BLOCKING_REGION -DHAVE_RB_THREAD_BLOCKING_REGION -DHAVE_SYS_SELECT_H -DEV_USE_SELECT -DHAVE_POLL_H -DEV_USE_POLL -DHAVE_SYS_EVENT_H -DHAVE_SYS_QUEUE_H -DEV_USE_KQUEUE -DHAVE_SYS_RESOURCE_H -DHAVE_SYS_RESOURCE_H -I/usr/local/opt/libyaml/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -fno-common -O3 -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl/include -fno-common -pipe  -o monitor.o -c monitor.c
+In file included from nio4r.h:10:0,
+                 from monitor.c:6:
+/Users/BigBug/.rvm/rubies/ruby-1.9.2-head/include/ruby-1.9.1/ruby/backward/rubyio.h:2:2: warning: #warning use "ruby/io.h" instead of "rubyio.h" [-Wcpp]
+/usr/local/opt/gcc46/bin/gcc-4.6 -I. -I/Users/BigBug/.rvm/rubies/ruby-1.9.2-head/include/ruby-1.9.1/x86_64-darwin11.4.2 -I/Users/BigBug/.rvm/rubies/ruby-1.9.2-head/include/ruby-1.9.1/ruby/backward -I/Users/BigBug/.rvm/rubies/ruby-1.9.2-head/include/ruby-1.9.1 -I. -DHAVE_RB_THREAD_BLOCKING_REGION -DHAVE_RB_THREAD_BLOCKING_REGION -DHAVE_SYS_SELECT_H -DEV_USE_SELECT -DHAVE_POLL_H -DEV_USE_POLL -DHAVE_SYS_EVENT_H -DHAVE_SYS_QUEUE_H -DEV_USE_KQUEUE -DHAVE_SYS_RESOURCE_H -DHAVE_SYS_RESOURCE_H -I/usr/local/opt/libyaml/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -fno-common -O3 -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl/include -fno-common -pipe  -o nio4r_ext.o -c nio4r_ext.c
+In file included from nio4r.h:10:0,
+                 from nio4r_ext.c:6:
+/Users/BigBug/.rvm/rubies/ruby-1.9.2-head/include/ruby-1.9.1/ruby/backward/rubyio.h:2:2: warning: #warning use "ruby/io.h" instead of "rubyio.h" [-Wcpp]
+In file included from nio4r_ext.c:7:0:
+../libev/ev.c:1535:31: warning: 'ev_default_loop_ptr' initialized and declared 'extern' [enabled by default]
+/usr/local/opt/gcc46/bin/gcc-4.6 -I. -I/Users/BigBug/.rvm/rubies/ruby-1.9.2-head/include/ruby-1.9.1/x86_64-darwin11.4.2 -I/Users/BigBug/.rvm/rubies/ruby-1.9.2-head/include/ruby-1.9.1/ruby/backward -I/Users/BigBug/.rvm/rubies/ruby-1.9.2-head/include/ruby-1.9.1 -I. -DHAVE_RB_THREAD_BLOCKING_REGION -DHAVE_RB_THREAD_BLOCKING_REGION -DHAVE_SYS_SELECT_H -DEV_USE_SELECT -DHAVE_POLL_H -DEV_USE_POLL -DHAVE_SYS_EVENT_H -DHAVE_SYS_QUEUE_H -DEV_USE_KQUEUE -DHAVE_SYS_RESOURCE_H -DHAVE_SYS_RESOURCE_H -I/usr/local/opt/libyaml/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -fno-common -O3 -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl/include -fno-common -pipe  -o selector.o -c selector.c
+In file included from nio4r.h:10:0,
+                 from selector.c:6:
+/Users/BigBug/.rvm/rubies/ruby-1.9.2-head/include/ruby-1.9.1/ruby/backward/rubyio.h:2:2: warning: #warning use "ruby/io.h" instead of "rubyio.h" [-Wcpp]
+In file included from selector.c:7:0:
+/Users/BigBug/.rvm/rubies/ruby-1.9.2-head/include/ruby-1.9.1/ruby/backward/rubysig.h:14:2: warning: #warning rubysig.h is obsolete [-Wcpp]
+selector.c: In function 'NIO_Selector_close':
+selector.c:391:5: warning: passing argument 2 of 'NIO_Selector_synchronize' from incompatible pointer type [enabled by default]
+selector.c:157:14: note: expected 'VALUE (*)(VALUE *)' but argument is of type 'VALUE (*)(VALUE)'
+selector.c:391:5: warning: passing argument 3 of 'NIO_Selector_synchronize' makes pointer from integer without a cast [enabled by default]
+selector.c:157:14: note: expected 'VALUE *' but argument is of type 'VALUE'
+selector.c: In function 'NIO_Selector_closed':
+selector.c:407:5: warning: passing argument 2 of 'NIO_Selector_synchronize' from incompatible pointer type [enabled by default]
+selector.c:157:14: note: expected 'VALUE (*)(VALUE *)' but argument is of type 'VALUE (*)(VALUE)'
+selector.c:407:5: warning: passing argument 3 of 'NIO_Selector_synchronize' makes pointer from integer without a cast [enabled by default]
+selector.c:157:14: note: expected 'VALUE *' but argument is of type 'VALUE'
+/usr/local/opt/gcc46/bin/gcc-4.6 -dynamic -bundle -o nio4r_ext.bundle monitor.o nio4r_ext.o selector.o -L. -L/Users/BigBug/.rvm/rubies/ruby-1.9.2-head/lib -L/usr/local/opt/libyaml/lib -L. -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl/lib -Wl,-undefined,dynamic_lookup -Wl,-multiply_defined,suppress -Wl,-flat_namespace  -lruby.1.9.1  -lpthread -ldl -lobjc 
+
+make  install
+/usr/bin/install -c -m 0755 nio4r_ext.bundle /Users/BigBug/abdoutest/chef-repo/vendor/bundle/ruby/1.9.1/gems/nio4r-1.0.0/ext/nio4r/.gem.20140804-598-1jsmbhh

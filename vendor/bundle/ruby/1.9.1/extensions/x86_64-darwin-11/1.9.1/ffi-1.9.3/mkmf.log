@@ -1,0 +1,188 @@
+package configuration for libffi
+cflags: -I/opt/local/lib/libffi-3.1/include 
+ldflags: -L$(libdir)
+libs: -lffi 
+
+have_library: checking for ffi_call() in -lffi... -------------------- yes
+
+"/usr/local/opt/gcc46/bin/gcc-4.6 -o conftest -I/Users/BigBug/.rvm/rubies/ruby-1.9.2-head/include/ruby-1.9.1/x86_64-darwin11.4.2 -I/Users/BigBug/.rvm/rubies/ruby-1.9.2-head/include/ruby-1.9.1/ruby/backward -I/Users/BigBug/.rvm/rubies/ruby-1.9.2-head/include/ruby-1.9.1 -I. -I/usr/local/opt/libyaml/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl/include -fno-common -pipe -I/opt/local/lib/libffi-3.1/include  conftest.c  -L. -L/Users/BigBug/.rvm/rubies/ruby-1.9.2-head/lib -L/usr/local/opt/libyaml/lib -L. -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl/lib -L/Users/BigBug/.rvm/rubies/ruby-1.9.2-head/lib     -lffi  -lruby.1.9.1-static  -lpthread -ldl -lobjc "
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: int main() {return 0;}
+/* end */
+
+"/usr/local/opt/gcc46/bin/gcc-4.6 -o conftest -I/Users/BigBug/.rvm/rubies/ruby-1.9.2-head/include/ruby-1.9.1/x86_64-darwin11.4.2 -I/Users/BigBug/.rvm/rubies/ruby-1.9.2-head/include/ruby-1.9.1/ruby/backward -I/Users/BigBug/.rvm/rubies/ruby-1.9.2-head/include/ruby-1.9.1 -I. -I/usr/local/opt/libyaml/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl/include -fno-common -pipe -I/opt/local/lib/libffi-3.1/include  conftest.c  -L. -L/Users/BigBug/.rvm/rubies/ruby-1.9.2-head/lib -L/usr/local/opt/libyaml/lib -L. -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl/lib -L/Users/BigBug/.rvm/rubies/ruby-1.9.2-head/lib     -lffi  -lruby.1.9.1-static -lffi  -lffi  -lpthread -ldl -lobjc "
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <ffi.h>
+4: 
+5: /*top*/
+6: int main() {return 0;}
+7: int t() { void ((*volatile p)()); p = (void ((*)()))ffi_call; return 0; }
+/* end */
+
+--------------------
+
+have_func: checking for ffi_prep_closure()... -------------------- yes
+
+"/usr/local/opt/gcc46/bin/gcc-4.6 -o conftest -I/Users/BigBug/.rvm/rubies/ruby-1.9.2-head/include/ruby-1.9.1/x86_64-darwin11.4.2 -I/Users/BigBug/.rvm/rubies/ruby-1.9.2-head/include/ruby-1.9.1/ruby/backward -I/Users/BigBug/.rvm/rubies/ruby-1.9.2-head/include/ruby-1.9.1 -I. -I/usr/local/opt/libyaml/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl/include -fno-common -pipe -I/opt/local/lib/libffi-3.1/include  conftest.c  -L. -L/Users/BigBug/.rvm/rubies/ruby-1.9.2-head/lib -L/usr/local/opt/libyaml/lib -L. -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl/lib -L/Users/BigBug/.rvm/rubies/ruby-1.9.2-head/lib    -lffi  -lffi  -lruby.1.9.1-static -lffi  -lffi  -lpthread -ldl -lobjc "
+conftest.c: In function 't':
+conftest.c:5:53: error: 'ffi_prep_closure' undeclared (first use in this function)
+conftest.c:5:53: note: each undeclared identifier is reported only once for each function it appears in
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: /*top*/
+4: int main() {return 0;}
+5: int t() { void ((*volatile p)()); p = (void ((*)()))ffi_prep_closure; return 0; }
+/* end */
+
+"/usr/local/opt/gcc46/bin/gcc-4.6 -o conftest -I/Users/BigBug/.rvm/rubies/ruby-1.9.2-head/include/ruby-1.9.1/x86_64-darwin11.4.2 -I/Users/BigBug/.rvm/rubies/ruby-1.9.2-head/include/ruby-1.9.1/ruby/backward -I/Users/BigBug/.rvm/rubies/ruby-1.9.2-head/include/ruby-1.9.1 -I. -I/usr/local/opt/libyaml/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl/include -fno-common -pipe -I/opt/local/lib/libffi-3.1/include  conftest.c  -L. -L/Users/BigBug/.rvm/rubies/ruby-1.9.2-head/lib -L/usr/local/opt/libyaml/lib -L. -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl/lib -L/Users/BigBug/.rvm/rubies/ruby-1.9.2-head/lib    -lffi  -lffi  -lruby.1.9.1-static -lffi  -lffi  -lpthread -ldl -lobjc "
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: /*top*/
+4: int main() {return 0;}
+5: int t() { ffi_prep_closure(); return 0; }
+/* end */
+
+--------------------
+
+have_func: checking for ffi_raw_call()... -------------------- no
+
+"/usr/local/opt/gcc46/bin/gcc-4.6 -o conftest -I/Users/BigBug/.rvm/rubies/ruby-1.9.2-head/include/ruby-1.9.1/x86_64-darwin11.4.2 -I/Users/BigBug/.rvm/rubies/ruby-1.9.2-head/include/ruby-1.9.1/ruby/backward -I/Users/BigBug/.rvm/rubies/ruby-1.9.2-head/include/ruby-1.9.1 -I. -I/usr/local/opt/libyaml/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl/include -fno-common -pipe -I/opt/local/lib/libffi-3.1/include  conftest.c  -L. -L/Users/BigBug/.rvm/rubies/ruby-1.9.2-head/lib -L/usr/local/opt/libyaml/lib -L. -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl/lib -L/Users/BigBug/.rvm/rubies/ruby-1.9.2-head/lib    -lffi  -lffi  -lruby.1.9.1-static -lffi  -lffi  -lpthread -ldl -lobjc "
+conftest.c: In function 't':
+conftest.c:5:53: error: 'ffi_raw_call' undeclared (first use in this function)
+conftest.c:5:53: note: each undeclared identifier is reported only once for each function it appears in
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: /*top*/
+4: int main() {return 0;}
+5: int t() { void ((*volatile p)()); p = (void ((*)()))ffi_raw_call; return 0; }
+/* end */
+
+"/usr/local/opt/gcc46/bin/gcc-4.6 -o conftest -I/Users/BigBug/.rvm/rubies/ruby-1.9.2-head/include/ruby-1.9.1/x86_64-darwin11.4.2 -I/Users/BigBug/.rvm/rubies/ruby-1.9.2-head/include/ruby-1.9.1/ruby/backward -I/Users/BigBug/.rvm/rubies/ruby-1.9.2-head/include/ruby-1.9.1 -I. -I/usr/local/opt/libyaml/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl/include -fno-common -pipe -I/opt/local/lib/libffi-3.1/include  conftest.c  -L. -L/Users/BigBug/.rvm/rubies/ruby-1.9.2-head/lib -L/usr/local/opt/libyaml/lib -L. -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl/lib -L/Users/BigBug/.rvm/rubies/ruby-1.9.2-head/lib    -lffi  -lffi  -lruby.1.9.1-static -lffi  -lffi  -lpthread -ldl -lobjc "
+Undefined symbols for architecture x86_64:
+  "_ffi_raw_call", referenced from:
+      _t in ccS6kZBG.o
+ld: symbol(s) not found for architecture x86_64
+collect2: ld returned 1 exit status
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: /*top*/
+4: int main() {return 0;}
+5: int t() { ffi_raw_call(); return 0; }
+/* end */
+
+--------------------
+
+have_func: checking for rb_thread_blocking_region()... -------------------- yes
+
+"/usr/local/opt/gcc46/bin/gcc-4.6 -o conftest -I/Users/BigBug/.rvm/rubies/ruby-1.9.2-head/include/ruby-1.9.1/x86_64-darwin11.4.2 -I/Users/BigBug/.rvm/rubies/ruby-1.9.2-head/include/ruby-1.9.1/ruby/backward -I/Users/BigBug/.rvm/rubies/ruby-1.9.2-head/include/ruby-1.9.1 -I. -I/usr/local/opt/libyaml/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl/include -fno-common -pipe -I/opt/local/lib/libffi-3.1/include  conftest.c  -L. -L/Users/BigBug/.rvm/rubies/ruby-1.9.2-head/lib -L/usr/local/opt/libyaml/lib -L. -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl/lib -L/Users/BigBug/.rvm/rubies/ruby-1.9.2-head/lib    -lffi  -lffi  -lruby.1.9.1-static -lffi  -lffi  -lpthread -ldl -lobjc "
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: /*top*/
+4: int main() {return 0;}
+5: int t() { void ((*volatile p)()); p = (void ((*)()))rb_thread_blocking_region; return 0; }
+/* end */
+
+--------------------
+
+have_func: checking for rb_thread_call_with_gvl()... -------------------- yes
+
+"/usr/local/opt/gcc46/bin/gcc-4.6 -o conftest -I/Users/BigBug/.rvm/rubies/ruby-1.9.2-head/include/ruby-1.9.1/x86_64-darwin11.4.2 -I/Users/BigBug/.rvm/rubies/ruby-1.9.2-head/include/ruby-1.9.1/ruby/backward -I/Users/BigBug/.rvm/rubies/ruby-1.9.2-head/include/ruby-1.9.1 -I. -I/usr/local/opt/libyaml/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl/include -fno-common -pipe -I/opt/local/lib/libffi-3.1/include  conftest.c  -L. -L/Users/BigBug/.rvm/rubies/ruby-1.9.2-head/lib -L/usr/local/opt/libyaml/lib -L. -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl/lib -L/Users/BigBug/.rvm/rubies/ruby-1.9.2-head/lib    -lffi  -lffi  -lruby.1.9.1-static -lffi  -lffi  -lpthread -ldl -lobjc "
+conftest.c: In function 't':
+conftest.c:5:53: error: 'rb_thread_call_with_gvl' undeclared (first use in this function)
+conftest.c:5:53: note: each undeclared identifier is reported only once for each function it appears in
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: /*top*/
+4: int main() {return 0;}
+5: int t() { void ((*volatile p)()); p = (void ((*)()))rb_thread_call_with_gvl; return 0; }
+/* end */
+
+"/usr/local/opt/gcc46/bin/gcc-4.6 -o conftest -I/Users/BigBug/.rvm/rubies/ruby-1.9.2-head/include/ruby-1.9.1/x86_64-darwin11.4.2 -I/Users/BigBug/.rvm/rubies/ruby-1.9.2-head/include/ruby-1.9.1/ruby/backward -I/Users/BigBug/.rvm/rubies/ruby-1.9.2-head/include/ruby-1.9.1 -I. -I/usr/local/opt/libyaml/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl/include -fno-common -pipe -I/opt/local/lib/libffi-3.1/include  conftest.c  -L. -L/Users/BigBug/.rvm/rubies/ruby-1.9.2-head/lib -L/usr/local/opt/libyaml/lib -L. -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl/lib -L/Users/BigBug/.rvm/rubies/ruby-1.9.2-head/lib    -lffi  -lffi  -lruby.1.9.1-static -lffi  -lffi  -lpthread -ldl -lobjc "
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: /*top*/
+4: int main() {return 0;}
+5: int t() { rb_thread_call_with_gvl(); return 0; }
+/* end */
+
+--------------------
+
+have_func: checking for rb_thread_call_without_gvl()... -------------------- yes
+
+"/usr/local/opt/gcc46/bin/gcc-4.6 -o conftest -I/Users/BigBug/.rvm/rubies/ruby-1.9.2-head/include/ruby-1.9.1/x86_64-darwin11.4.2 -I/Users/BigBug/.rvm/rubies/ruby-1.9.2-head/include/ruby-1.9.1/ruby/backward -I/Users/BigBug/.rvm/rubies/ruby-1.9.2-head/include/ruby-1.9.1 -I. -I/usr/local/opt/libyaml/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl/include -fno-common -pipe -I/opt/local/lib/libffi-3.1/include  conftest.c  -L. -L/Users/BigBug/.rvm/rubies/ruby-1.9.2-head/lib -L/usr/local/opt/libyaml/lib -L. -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl/lib -L/Users/BigBug/.rvm/rubies/ruby-1.9.2-head/lib    -lffi  -lffi  -lruby.1.9.1-static -lffi  -lffi  -lpthread -ldl -lobjc "
+conftest.c: In function 't':
+conftest.c:5:53: error: 'rb_thread_call_without_gvl' undeclared (first use in this function)
+conftest.c:5:53: note: each undeclared identifier is reported only once for each function it appears in
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: /*top*/
+4: int main() {return 0;}
+5: int t() { void ((*volatile p)()); p = (void ((*)()))rb_thread_call_without_gvl; return 0; }
+/* end */
+
+"/usr/local/opt/gcc46/bin/gcc-4.6 -o conftest -I/Users/BigBug/.rvm/rubies/ruby-1.9.2-head/include/ruby-1.9.1/x86_64-darwin11.4.2 -I/Users/BigBug/.rvm/rubies/ruby-1.9.2-head/include/ruby-1.9.1/ruby/backward -I/Users/BigBug/.rvm/rubies/ruby-1.9.2-head/include/ruby-1.9.1 -I. -I/usr/local/opt/libyaml/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl/include -fno-common -pipe -I/opt/local/lib/libffi-3.1/include  conftest.c  -L. -L/Users/BigBug/.rvm/rubies/ruby-1.9.2-head/lib -L/usr/local/opt/libyaml/lib -L. -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl/lib -L/Users/BigBug/.rvm/rubies/ruby-1.9.2-head/lib    -lffi  -lffi  -lruby.1.9.1-static -lffi  -lffi  -lpthread -ldl -lobjc "
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: /*top*/
+4: int main() {return 0;}
+5: int t() { rb_thread_call_without_gvl(); return 0; }
+/* end */
+
+--------------------
+
+have_func: checking for ffi_prep_cif_var()... -------------------- no
+
+"/usr/local/opt/gcc46/bin/gcc-4.6 -o conftest -I/Users/BigBug/.rvm/rubies/ruby-1.9.2-head/include/ruby-1.9.1/x86_64-darwin11.4.2 -I/Users/BigBug/.rvm/rubies/ruby-1.9.2-head/include/ruby-1.9.1/ruby/backward -I/Users/BigBug/.rvm/rubies/ruby-1.9.2-head/include/ruby-1.9.1 -I. -I/usr/local/opt/libyaml/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl/include -fno-common -pipe -I/opt/local/lib/libffi-3.1/include  conftest.c  -L. -L/Users/BigBug/.rvm/rubies/ruby-1.9.2-head/lib -L/usr/local/opt/libyaml/lib -L. -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl/lib -L/Users/BigBug/.rvm/rubies/ruby-1.9.2-head/lib    -lffi  -lffi  -lruby.1.9.1-static -lffi  -lffi  -lpthread -ldl -lobjc "
+conftest.c: In function 't':
+conftest.c:5:53: error: 'ffi_prep_cif_var' undeclared (first use in this function)
+conftest.c:5:53: note: each undeclared identifier is reported only once for each function it appears in
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: /*top*/
+4: int main() {return 0;}
+5: int t() { void ((*volatile p)()); p = (void ((*)()))ffi_prep_cif_var; return 0; }
+/* end */
+
+"/usr/local/opt/gcc46/bin/gcc-4.6 -o conftest -I/Users/BigBug/.rvm/rubies/ruby-1.9.2-head/include/ruby-1.9.1/x86_64-darwin11.4.2 -I/Users/BigBug/.rvm/rubies/ruby-1.9.2-head/include/ruby-1.9.1/ruby/backward -I/Users/BigBug/.rvm/rubies/ruby-1.9.2-head/include/ruby-1.9.1 -I. -I/usr/local/opt/libyaml/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl/include -fno-common -pipe -I/opt/local/lib/libffi-3.1/include  conftest.c  -L. -L/Users/BigBug/.rvm/rubies/ruby-1.9.2-head/lib -L/usr/local/opt/libyaml/lib -L. -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl/lib -L/Users/BigBug/.rvm/rubies/ruby-1.9.2-head/lib    -lffi  -lffi  -lruby.1.9.1-static -lffi  -lffi  -lpthread -ldl -lobjc "
+Undefined symbols for architecture x86_64:
+  "_ffi_prep_cif_var", referenced from:
+      _t in ccXffR4O.o
+ld: symbol(s) not found for architecture x86_64
+collect2: ld returned 1 exit status
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: /*top*/
+4: int main() {return 0;}
+5: int t() { ffi_prep_cif_var(); return 0; }
+/* end */
+
+--------------------
+

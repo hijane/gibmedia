@@ -1,0 +1,19 @@
+/Users/BigBug/.rvm/rubies/ruby-1.9.2-head/bin/ruby extconf.rb 
+checking for main() in -lgecodesupport... yes
+checking for main() in -lgecodesupport... yes
+checking for main() in -lgecodekernel... yes
+checking for main() in -lgecodeint... yes
+checking for main() in -lgecodeminimodel... yes
+checking for main() in -lgecodesearch... yes
+creating Makefile
+
+make  clean
+
+make
+g++ -I. -I/Users/BigBug/.rvm/rubies/ruby-1.9.2-head/include/ruby-1.9.1/x86_64-darwin11.4.2 -I/Users/BigBug/.rvm/rubies/ruby-1.9.2-head/include/ruby-1.9.1/ruby/backward -I/Users/BigBug/.rvm/rubies/ruby-1.9.2-head/include/ruby-1.9.1 -I. -I/Users/BigBug/abdoutest/chef-repo/vendor/bundle/ruby/1.9.1/gems/dep-selector-libgecode-1.0.2/lib/dep-selector-libgecode/vendored-gecode/include -I/usr/local/opt/libyaml/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -fno-common -O3 -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl/include -fno-common -pipe   -o define_dummy_init.o -c define_dummy_init.cxx
+g++ -I. -I/Users/BigBug/.rvm/rubies/ruby-1.9.2-head/include/ruby-1.9.1/x86_64-darwin11.4.2 -I/Users/BigBug/.rvm/rubies/ruby-1.9.2-head/include/ruby-1.9.1/ruby/backward -I/Users/BigBug/.rvm/rubies/ruby-1.9.2-head/include/ruby-1.9.1 -I. -I/Users/BigBug/abdoutest/chef-repo/vendor/bundle/ruby/1.9.1/gems/dep-selector-libgecode-1.0.2/lib/dep-selector-libgecode/vendored-gecode/include -I/usr/local/opt/libyaml/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -fno-common -O3 -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl/include -fno-common -pipe   -o dep_selector_to_gecode.o -c dep_selector_to_gecode.cpp
+g++ -I. -I/Users/BigBug/.rvm/rubies/ruby-1.9.2-head/include/ruby-1.9.1/x86_64-darwin11.4.2 -I/Users/BigBug/.rvm/rubies/ruby-1.9.2-head/include/ruby-1.9.1/ruby/backward -I/Users/BigBug/.rvm/rubies/ruby-1.9.2-head/include/ruby-1.9.1 -I. -I/Users/BigBug/abdoutest/chef-repo/vendor/bundle/ruby/1.9.1/gems/dep-selector-libgecode-1.0.2/lib/dep-selector-libgecode/vendored-gecode/include -I/usr/local/opt/libyaml/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -fno-common -O3 -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl/include -fno-common -pipe   -o dep_selector_to_gecode_interface.o -c dep_selector_to_gecode_interface.cpp
+g++ -dynamic -bundle -o dep_gecode.bundle define_dummy_init.o dep_selector_to_gecode.o dep_selector_to_gecode_interface.o -L. -L/Users/BigBug/.rvm/rubies/ruby-1.9.2-head/lib -L/usr/local/opt/libyaml/lib -L/Users/BigBug/abdoutest/chef-repo/vendor/bundle/ruby/1.9.1/gems/dep-selector-libgecode-1.0.2/lib/dep-selector-libgecode/vendored-gecode/lib -L. -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl/lib -Wl,-undefined,dynamic_lookup -Wl,-multiply_defined,suppress -Wl,-flat_namespace -Wl,-rpath,/Users/BigBug/abdoutest/chef-repo/vendor/bundle/ruby/1.9.1/gems/dep-selector-libgecode-1.0.2/lib/dep-selector-libgecode/vendored-gecode/lib  -lruby.1.9.1 -lgecodesearch -lgecodeminimodel -lgecodeint -lgecodekernel -lgecodesupport -lgecodesupport  -lpthread -ldl -lobjc 
+
+make  install
+/usr/bin/install -c -m 0755 dep_gecode.bundle /Users/BigBug/abdoutest/chef-repo/vendor/bundle/ruby/1.9.1/gems/dep_selector-1.0.3/ext/dep_gecode/.gem.20140804-2463-19kuko3

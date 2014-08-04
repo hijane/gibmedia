@@ -1,0 +1,12 @@
+/Users/BigBug/.rvm/rubies/ruby-1.9.2-head/bin/ruby extconf.rb 
+creating Makefile
+
+make  clean
+
+make
+/usr/local/opt/gcc46/bin/gcc-4.6 -I. -I/Users/BigBug/.rvm/rubies/ruby-1.9.2-head/include/ruby-1.9.1/x86_64-darwin11.4.2 -I/Users/BigBug/.rvm/rubies/ruby-1.9.2-head/include/ruby-1.9.1/ruby/backward -I/Users/BigBug/.rvm/rubies/ruby-1.9.2-head/include/ruby-1.9.1 -I. -I/usr/local/opt/libyaml/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -fno-common -O3 -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl/include -fno-common -pipe -O3 -Wall  -o parser.o -c parser.c
+/usr/local/opt/gcc46/bin/gcc-4.6 -dynamic -bundle -o parser.bundle parser.o -L. -L/Users/BigBug/.rvm/rubies/ruby-1.9.2-head/lib -L/usr/local/opt/libyaml/lib -L. -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl/lib -Wl,-undefined,dynamic_lookup -Wl,-multiply_defined,suppress -Wl,-flat_namespace  -lruby.1.9.1  -lpthread -ldl -lobjc 
+
+make  install
+mkdir -p /Users/BigBug/abdoutest/chef-repo/vendor/bundle/ruby/1.9.1/gems/json-1.8.1/ext/json/ext/parser/.gem.20140804-598-1iwpi2m/json/ext
+/usr/bin/install -c -m 0755 parser.bundle /Users/BigBug/abdoutest/chef-repo/vendor/bundle/ruby/1.9.1/gems/json-1.8.1/ext/json/ext/parser/.gem.20140804-598-1iwpi2m/json/ext
