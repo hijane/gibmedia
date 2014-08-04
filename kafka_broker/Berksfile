@@ -1,3 +1,3 @@
 #site :opscode
-chef_api "https://chef.gibmedia.fr"
+source "http://api.berkshelf.com"
 metadata
