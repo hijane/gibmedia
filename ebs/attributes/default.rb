@@ -21,7 +21,7 @@ default[:ebs][:devices] ||= {
         :disk_size => 45,
         :raid_level => 10,
         :fstype => 'xfs',
-        :mount_point => '/abdou',
+        :mount_point => '/abdou1',
         :uselvm => true,
       }
     }
