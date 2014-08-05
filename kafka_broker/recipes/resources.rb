@@ -1,3 +1,15 @@
+if node['kafka_broker']['broker_id'].nil? || node['kafka_broker']['broker_id'].empty?
+node.set['kafka_broker']['broker_id'] = node[:ipaddress].gsub(".","")
+end
+
+if node['kafka_broker']['broker_host_name'].nil? || node['kafka_broker']['broker_host_name'].empty?
+node.set['kafka_broker']['broker_host_name'] = node[:fqdn]
+end
+
+log "Broker id: #{node['kafka_broker']['broker_id']}"
+log "Broker name: #{node['kafka_broker']['broker_host_name']}"
+
+
 base_install_dir = File.dirname(node['kafka_broker']['install_dir'])
 tarball_file_base = "kafka_#{node['kafka_broker']['scala_version']}-#{node['kafka_broker']['version']}"
 tarball_file = "#{tarball_file_base}.tar.gz"
@@ -22,3 +34,4 @@ directory "#{node['kafka_broker']['install_dir']}/logs"
 file tarball_file_path do
   action :delete
 end
+
