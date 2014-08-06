@@ -3,7 +3,7 @@ node.set['kafka_broker']['broker_id'] = node[:ipaddress].gsub(".","")
 end
 
 if node['kafka_broker']['broker_host_name'].nil? || node['kafka_broker']['broker_host_name'].empty?
-node.set['kafka_broker']['broker_host_name'] = node[:fqdn]
+node.set['kafka_broker']['broker_host_name'] = node[:ec2][:public_hostname]
 end
 
 log "Broker id: #{node['kafka_broker']['broker_id']}"
