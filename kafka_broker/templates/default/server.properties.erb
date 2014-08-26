@@ -92,7 +92,7 @@ log.retention.hours=<%=node["kafka_broker"]["log_retention_hours"]%>
 
 # A size-based retention policy for logs. Segments are pruned from the log as long as the remaining
 # segments don't drop below log.retention.bytes.
-log.retention.bytes=1073741824
+log.retention.bytes=3221225472
 
 # The maximum size of a log segment file. When this size is reached a new log segment will be created.
 log.segment.bytes=536870912
@@ -118,3 +118,12 @@ log.retention.check.interval.ms=60000
 zookeeper.connect=ec2-54-73-120-3.eu-west-1.compute.amazonaws.com:2181
 # Timeout in ms for connecting to zookeeper
 zookeeper.connection.timeout.ms=<%= node[:kafka_broker][:zk_connectiontimeout] %>
+
+
+
+############################ Additionnal conf #######################
+
+# Enable auto creation of topic on the server.
+# If this is set to true then attempts to produce, consume, or fetch metadata for a non-existent
+# topic will automatically create it with the default replication factor and number of partitions.
+auto.create.topics.enable=false
